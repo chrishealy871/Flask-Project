@@ -29,16 +29,16 @@ def show_a_student(id):
 
     return "Not Found"
 
-@app.route('/students/add', methods = ['GET', 'POST'])
+@app.route('/students', methods = ['GET', 'POST'])
 def add_a_student():
-    if request.method == 'POST':
-        id = len(students) + 1
-        name = request.form['Name']
-        age = request.form['Age']
-        students.append({"id": id, "name": name, "age": age})
-        return "OK"
-    else:
-        return render_template("add_a_student.html")
+   if request.method == 'POST':
+       id = len(students) + 1
+       name = request.form['Name']
+       age = request.form['Age']
+       students.append({"id": id, "name": name, "age": age})
+       return render_template("students.html", students = students)
+   else:
+       return render_template("students.html")
 
 
 if __name__ == '__main__':
