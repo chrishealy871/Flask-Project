@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Class List</h2>
+
+<ul>
+    {%  for class in classes %}
+        <li><a href = "/classes/{{ class.name }}">{{ class.name }}</a></li>
+    {%  endfor %}
+</ul>
+
+</body>
+</html>

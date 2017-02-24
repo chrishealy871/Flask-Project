@@ -6,5 +6,12 @@
 </head>
 <body>
 <h2>The Students age is now a Template</h2>
+
+
+<ul>
+    {% for student in students %}
+    <li> <a href ="/student/{{student.id}}">{{ student.id}} - {{ student.name}} - ({{ student.age }})</a></li>
+    {%  endfor  %}
+</ul>
 </body>
 </html>
