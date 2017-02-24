@@ -10,8 +10,10 @@
 
 <ul>
     {% for student in students %}
-    <li> <a href ="/student/{{student.id}}">{{ student.id}} - {{ student.name}} - ({{ student.age }})</a></li>
+    <li> <a href ="/students/{{student.id}}">{{ student.id}} - {{ student.name}} - ({{ student.age }})</a></li>
     {%  endfor  %}
+<hr>
+<a href="/students/add">Add</a>
 </ul>
 </body>
 </html>
